@@ -50,4 +50,4 @@ class PresenceItem(CamelCaseModel):
 
 
 class PresenceBatchResponse(CamelCaseModel):
-    __root__: List[PresenceItem]
+    root: List[PresenceItem]

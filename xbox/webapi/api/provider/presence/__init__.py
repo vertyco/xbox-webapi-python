@@ -71,7 +71,7 @@ class PresenceProvider(BaseProvider):
         )
         resp.raise_for_status()
         parsed = PresenceBatchResponse.parse_obj(resp.json())
-        return parsed.__root__
+        return parsed.root
 
     async def get_presence_own(
         self, presence_level: PresenceLevel = PresenceLevel.ALL, **kwargs
